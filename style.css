@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+/* 共通コード------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* headerコード------------------------- */
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+header h1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+header ul {
+    /* display: flex;使用時
+    空いているスペースを均等に伸ばす */
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+header li a {
+    color: black;
+}
+
+header a:hover {
+    color: #999999;
+}
+
+/* mainコード------------------------- */
+section {
+    display: block;
+    width: 95%;
+    margin: 30px auto;
+    padding: 18px;
+
+    /* background-color: aliceblue; */
+}
+
+section h2 {
+    text-align: center;
+    padding: 18px 0 5px 0;
+    text-shadow: 1px 2px 3px rgb(206, 206, 148);
+    font-size: 25px;
+}
+
+section small {
+    display: block;
+    text-align: center;
+}
+
+/* 私について---------------------------- */
+.about-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    background-color: rgb(255, 190, 91);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 左側の情報 */
+.about-introduce {
+    width: 70%;
+}
+
+.row {
+    display: flex;
+    margin: 24px 0;
+    padding: 16px 18px;
+    background: #ffffff;
+    border-radius: 8px;
+    font-size: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* タイトル部分 */
+.title {
+    width: 30%;
+    text-align: right;
+    font-weight: 600;
+    color: #223;
+    padding-right: 10px;
+}
+
+/* 内容部分 */
+.me {
+    width: 70%;
+    padding-left: 10px;
+    line-height: 1.6;
+}
+
+.about-container rt {
+    color: rgb(8, 19, 44);
+}
+
+/* 右側の顔写真部分 */
+.me-img {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.me-img img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* お知らせ------------------------------- */
+#news article {
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+#news ul {
+    margin: 10px;
+}
+
+#news li {
+    border-bottom: 1px solid rgb(206, 201, 201);
+    padding: 20px;
+    display: flex;
+    font-size: 16px;
+}
+
+#news p {
+    padding-left: 80px;
+}
+
+/* スキル------------------------------ */
+#skill article {
+    margin: 60px auto;
+    max-width: 1000px;
+}
+
+#skill article>p {
+    font-size: 18px;
+    text-align: center;
+}
+
+#skill div {
+    max-width: 720px;
+    margin: 30px auto;
+    padding: 0 40px 0 60px;
+}
+
+#skill li {
+    padding: 30px 0;
+}
+
+.skill-introduce {
+    font-weight: 600;
+}
+
+#skill div p {
+    font-size: 20px;
+}
+
+/* -------------js操作-------------- */
+/* .abcのpのこと */
+#skill article>p:nth-child(3) {
+    font-size: 22px;
+}
+
+.animate {
+    opacity: 0;
+    transition: all 3s;
+}
+
+.animate.sr {
+    transform: translateX(200px);
+}
+
+.animate.sl {
+    transform: translateX(-200px);
+}
+
+.animate.appear {
+    opacity: 1;
+    transform: none;
+}
+
+.abc {
+    opacity: 0;
+    transition: all 3s;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abc.show {
+    scale: 1.2;
+    opacity: 1;
+}
+
+/* 実績一覧------------------------------- */
+#result article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 60px 0;
+}
+
+#result article a {
+    border: 1px solid black;
+    display: block;
+    padding: 18px;
+    width: calc((100% - 24px) /4);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+#result a:hover {
+    background-size: cover;
+    background-position: top;
+}
+
+#result a:nth-child(1):hover {
+    background-image: url(image/1_Travel\ Blog.webp);
+
+}
+
+#result a:nth-child(2):hover {
+    background-image: url(image/2_clothes-shop.webp);
+}
+
+#result a:nth-child(3):hover {
+    background-image: url(image/3_okayama.webp);
+}
+
+#result a:nth-child(4):hover {
+    background-image: url(image/4_home-items.webp);
+}
+
+#result a:nth-child(5):hover {
+    background-image: url(image/5_animal.webp);
+}
+
+#result a:nth-child(6):hover {
+    background-image: url(image/6_Gourmet\ shopping.webp);
+}
+
+#result a:nth-child(7):hover {
+    background-image: url(image/7_My\ buddy.webp);
+}
+
+#result a:nth-child(8):hover {
+    background-image: url(image/8_index\ finger.webp);
+}
+
+/* お問い合わせ------------------------ */
+#form p {
+    text-align: center;
+    padding: 18px 0;
+}
+
+label {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+label p {
+    width: 30%;
+}
+
+label input {
+    width: 50%;
+    padding: 10px 0;
+
+}
+
+label textarea {
+    width: 50%;
+    padding: 10px;
+}
+
+#form button {
+    display: block;
+    margin: 70px auto;
+    width: 400px;
+    padding: 20px 30px;
+    cursor: pointer;
+    background-color: rgb(255, 190, 91);
+}
+
+#form button:hover {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+/* footerコード------------------------- */
+footer {
+    display: flex;
+    /* 中央寄せ */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* SNS を右に固定するための基準 */
+    position: relative;
+}
+
+footer small {
+    font-size: 14px;
+    color: #666;
+}
+
+/* SNS を右端に寄せる */
+footer .sns {
+    position: absolute;
+    /* 右の余白 */
+    right: 20px;
+    display: flex;
+    /* アイコン同士の間隔 */
+    gap: 15px;
+}
+
+footer .sns a {
+    color: #444;
+    font-size: 20px;
+}
+
+footer .sns a:hover {
+    color: black;
+}
+
+
+/* レスポンシブコード----------------
+----------------------------------- */
+@media(max-width:800px) {
+
+    /* headerコード------------------------- */
+    header {
+        padding-top: 20px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    header h1 {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    header li {
+        padding: 30px 10px 0;
+    }
+
+    /* mainコード------------------------- */
+    section {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* 私について---------------------------- */
+    .about-container {
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    /* 左側の情報 */
+    .about-introduce {
+        width: 100%;
+        margin-top: -30px;
+    }
+
+    /* 右側の顔写真部分 */
+    .me-img {
+        width: 100%;
+    }
+
+    /* スキル------------------------------ */
+    #skill article>p {
+        margin: 0 20px;
+    }
+
+    /* -------------js操作-------------- */
+    /* .abcのpのこと */
+    #skill article>p:nth-child(3) {
+        font-size: 20px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .abc {
+        height: 15vh;
+    }
+
+    .abc.show {
+        scale: 1.3;
+    }
+
+    /* 実績一覧------------------------------- */
+    #result article {
+        padding: 0 10px;
+    }
+
+    #result article a {
+        width: calc((100% - 8px) /2);
+    }
+
+    /* お問い合わせ------------------------ */
+    label {
+        display: block;
+        width: 100%;
+    }
+
+    label p,
+    label input,
+    label textarea {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
