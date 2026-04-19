@@ -302,6 +302,14 @@ section small {
     background-image: url(image/10_MY\ buddy.webp);
 }
 
+#result a:nth-child(11):hover {
+    background-image: url(image/11_Play\ Art.webp);
+}
+
+#result a:nth-child(12):hover {
+    background-image: url(image/12_Y\ C.webp);
+}
+
 /* お問い合わせ------------------------ */
 #form p {
     text-align: center;
