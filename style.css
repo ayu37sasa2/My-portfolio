@@ -299,6 +299,10 @@ section small {
     background-image: url(image/9_WiX\ Stuudio.webp);
 }
 
+#result a:nth-child(10):hover {
+    background-image: url(image/10_MY\ buddy.webp);
+}
+
 /* お問い合わせ------------------------ */
 #form p {
     text-align: center;
